@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Sprint Game</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script defer src="shuffle.js"></script>
+  </head>
+  <body>
+    <section class="main-content">
+      <div class="game-container">
+        <h1 class="headline">Math Sprint Game</h1>
+        <div class="section section-1">
+          <form class="form">
+            <div class="selection-block">
+              <ul class="selections">
+                <li class="selection" data-amount="10">
+                  <div class="amount">10 Questions</div>
+                  <div class="best-score">
+                    <div class="score-title">Best score</div>
+                    <div class="score-time"></div>
+                  </div>
+                </li>
+
+                <li class="selection" data-amount="25">
+                  <div class="amount">25 Questions</div>
+                  <div class="best-score">
+                    <div class="score-title">Best score</div>
+                    <div class="score-time"></div>
+                  </div>
+                </li>
+
+                <li class="selection" data-amount="50">
+                  <div class="amount">50 Questions</div>
+                  <div class="best-score">
+                    <div class="score-title">Best score</div>
+                    <div class="score-time"></div>
+                  </div>
+                </li>
+
+                <li class="selection" data-amount="99">
+                  <div class="amount">99 Questions</div>
+                  <div class="best-score">
+                    <div class="score-title">Best score</div>
+                    <div class="score-time"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="button-container">
+              <button type="submit" class="blue-btn" id="start-button">
+                Start Round
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="section section-2 countdown-page hidden">
+          <h1 class="countdown">3</h1>
+        </div>
+
+        <div class="section section-3 hidden">
+          <div class="items">
+          </div>
+
+        <div class="btn-section-3">
+            <button class="btn red-btn select" id="wrong" onclick="select(false)">Wrong</button>
+            <button class="btn green-btn select" id="right" onclick="select(true)">Right</button>
+          </div>
+      </div>
+
+      <div class="section section-4 hidden">
+        <div class="your-time">
+          <span class="time-name">Your Time</span>
+          <span class="time-number"></span>
+        </div>
+        <div class="your-time-info">
+          <span class="time-base"></span>
+          <span class="time-penalty"></span>
+        </div>
+        <button class="blue-btn hidden play-again" onclick="playAgain()">Play Again</button>
+      </div>
+    </section>
+  </body>
+</html>
